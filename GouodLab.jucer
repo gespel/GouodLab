@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="JDx22Z" name="GouodLab" projectType="audioplug" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1">
+  <MAINGROUP id="QAyXuk" name="GouodLab">
+    <GROUP id="{1628D1AC-E42D-5BE7-6B2E-A0153F8C03F9}" name="Source">
+      <GROUP id="{2AEB511A-0828-982E-CD13-F2852A74B190}" name="GouodLib">
+        <FILE id="KxuWg8" name="EnvelopeGenerator.cpp" compile="1" resource="0"
+              file="Source/GouodLib/EnvelopeGenerator.cpp"/>
+        <FILE id="gkRfCp" name="EnvelopeGenerator.h" compile="0" resource="0"
+              file="Source/GouodLib/EnvelopeGenerator.h"/>
+        <FILE id="CjmC9O" name="Filter.cpp" compile="1" resource="0" file="Source/GouodLib/Filter.cpp"/>
+        <FILE id="Pc5EZW" name="Filter.h" compile="0" resource="0" file="Source/GouodLib/Filter.h"/>
+        <FILE id="yMESw3" name="Randoneur.cpp" compile="1" resource="0" file="Source/GouodLib/Randoneur.cpp"/>
+        <FILE id="jqQbKH" name="Randoneur.h" compile="0" resource="0" file="Source/GouodLib/Randoneur.h"/>
+        <FILE id="BqHDVo" name="ScriptLanguage.cpp" compile="1" resource="0"
+              file="Source/GouodLib/ScriptLanguage.cpp"/>
+        <FILE id="GGo5cz" name="ScriptLanguage.h" compile="0" resource="0"
+              file="Source/GouodLib/ScriptLanguage.h"/>
+        <FILE id="MGHM3w" name="StepSequencer.cpp" compile="1" resource="0"
+              file="Source/GouodLib/StepSequencer.cpp"/>
+        <FILE id="WJoKnB" name="StepSequencer.h" compile="0" resource="0" file="Source/GouodLib/StepSequencer.h"/>
+        <FILE id="GT5FB0" name="Synths.cpp" compile="1" resource="0" file="Source/GouodLib/Synths.cpp"/>
+        <FILE id="wqqHKP" name="Synths.h" compile="0" resource="0" file="Source/GouodLib/Synths.h"/>
+      </GROUP>
+      <FILE id="u8sR6S" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="rP95cE" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="qcNXh3" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="TJfUrT" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
+  <EXPORTFORMATS>
+    <LINUX_MAKE targetFolder="Builds/LinuxMakefile">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="GouodLab"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="GouodLab"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../JUCE/modules"/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
+  </EXPORTFORMATS>
+</JUCERPROJECT>

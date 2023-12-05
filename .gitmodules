@@ -1,0 +1,3 @@
+[submodule "GouodLib"]
+	path = GouodLib
+	url = https://github.com/gespel/GouodLib
