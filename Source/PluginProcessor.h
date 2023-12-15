@@ -9,8 +9,12 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include "GouodLib/StepSequencer.h"
 #include "GouodLib/Synths.h"
 #include <memory>
+#include "GouodLib/CommunicationServer.h"
+#include "GouodLib/Instruments.h"
+
 
 //==============================================================================
 /**
@@ -58,5 +62,13 @@ public:
 private:
     //==============================================================================
     std::unique_ptr<FMSynth> fs;
+    std::unique_ptr<CommunicationServer> cs;
+    std::unique_ptr<StrangeOrgan> o;
+    std::unique_ptr<StrangeOrgan> o2;
+    StepSequencer *ss;
+    ServerThread st;
+
+    SineSynth *bs;
+    
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (GouodLabAudioProcessor)
 };

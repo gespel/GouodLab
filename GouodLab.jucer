@@ -5,23 +5,31 @@
   <MAINGROUP id="QAyXuk" name="GouodLab">
     <GROUP id="{1628D1AC-E42D-5BE7-6B2E-A0153F8C03F9}" name="Source">
       <GROUP id="{2AEB511A-0828-982E-CD13-F2852A74B190}" name="GouodLib">
-        <FILE id="KxuWg8" name="EnvelopeGenerator.cpp" compile="1" resource="0"
+        <FILE id="fxyMcq" name="CommunicationServer.cpp" compile="1" resource="0"
+              file="Source/GouodLib/CommunicationServer.cpp"/>
+        <FILE id="lH86rK" name="CommunicationServer.h" compile="0" resource="0"
+              file="Source/GouodLib/CommunicationServer.h"/>
+        <FILE id="qmDz2A" name="EnvelopeGenerator.cpp" compile="1" resource="0"
               file="Source/GouodLib/EnvelopeGenerator.cpp"/>
-        <FILE id="gkRfCp" name="EnvelopeGenerator.h" compile="0" resource="0"
+        <FILE id="b5nlXa" name="EnvelopeGenerator.h" compile="0" resource="0"
               file="Source/GouodLib/EnvelopeGenerator.h"/>
-        <FILE id="CjmC9O" name="Filter.cpp" compile="1" resource="0" file="Source/GouodLib/Filter.cpp"/>
-        <FILE id="Pc5EZW" name="Filter.h" compile="0" resource="0" file="Source/GouodLib/Filter.h"/>
-        <FILE id="yMESw3" name="Randoneur.cpp" compile="1" resource="0" file="Source/GouodLib/Randoneur.cpp"/>
-        <FILE id="jqQbKH" name="Randoneur.h" compile="0" resource="0" file="Source/GouodLib/Randoneur.h"/>
-        <FILE id="BqHDVo" name="ScriptLanguage.cpp" compile="1" resource="0"
+        <FILE id="Rh5g7p" name="Filter.cpp" compile="1" resource="0" file="Source/GouodLib/Filter.cpp"/>
+        <FILE id="ijRNyz" name="Filter.h" compile="0" resource="0" file="Source/GouodLib/Filter.h"/>
+        <FILE id="mSiIQK" name="Instruments.cpp" compile="1" resource="0" file="Source/GouodLib/Instruments.cpp"/>
+        <FILE id="PA94k5" name="Instruments.h" compile="0" resource="0" file="Source/GouodLib/Instruments.h"/>
+        <FILE id="yl7Iwi" name="Randoneur.cpp" compile="1" resource="0" file="Source/GouodLib/Randoneur.cpp"/>
+        <FILE id="Sh1XIo" name="Randoneur.h" compile="0" resource="0" file="Source/GouodLib/Randoneur.h"/>
+        <FILE id="F3roZk" name="ScriptLanguage.cpp" compile="1" resource="0"
               file="Source/GouodLib/ScriptLanguage.cpp"/>
-        <FILE id="GGo5cz" name="ScriptLanguage.h" compile="0" resource="0"
+        <FILE id="VhaQzy" name="ScriptLanguage.h" compile="0" resource="0"
               file="Source/GouodLib/ScriptLanguage.h"/>
-        <FILE id="MGHM3w" name="StepSequencer.cpp" compile="1" resource="0"
+        <FILE id="z12rSp" name="StepSequencer.cpp" compile="1" resource="0"
               file="Source/GouodLib/StepSequencer.cpp"/>
-        <FILE id="WJoKnB" name="StepSequencer.h" compile="0" resource="0" file="Source/GouodLib/StepSequencer.h"/>
-        <FILE id="GT5FB0" name="Synths.cpp" compile="1" resource="0" file="Source/GouodLib/Synths.cpp"/>
-        <FILE id="wqqHKP" name="Synths.h" compile="0" resource="0" file="Source/GouodLib/Synths.h"/>
+        <FILE id="BcEpfL" name="StepSequencer.h" compile="0" resource="0" file="Source/GouodLib/StepSequencer.h"/>
+        <FILE id="Mjhzvi" name="Synths.cpp" compile="1" resource="0" file="Source/GouodLib/Synths.cpp"/>
+        <FILE id="yZXAhx" name="Synths.h" compile="0" resource="0" file="Source/GouodLib/Synths.h"/>
+        <FILE id="uWvzOt" name="tester" compile="0" resource="1" file="Source/GouodLib/tester"/>
+        <FILE id="RZ7tKy" name="tester.cpp" compile="1" resource="0" file="Source/GouodLib/tester.cpp"/>
       </GROUP>
       <FILE id="u8sR6S" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>

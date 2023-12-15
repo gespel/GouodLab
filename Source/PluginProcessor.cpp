@@ -93,8 +93,17 @@ void GouodLabAudioProcessor::changeProgramName (int index, const juce::String& n
 //==============================================================================
 void GouodLabAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
-    // Use this method as the place to do any pre-playback
-    // initialisation that you need..
+    this->cs = std::make_unique<CommunicationServer>();
+    this->ss = new StepSequencer((float)sampleRate, {1.f, 1.f + 5.f/12.f, 1.f + 8.f/12.f, 2.f});
+    this->ss->setSpeed(2);
+    this->bs = new SineSynth(0.03, sampleRate);
+    this->o = std::make_unique<StrangeOrgan>(440.f, sampleRate);
+    this->o2 = std::make_unique<StrangeOrgan>(440.f * (1.f + 5.f/12.f), sampleRate);
+    
+    st.startThread();
+    fs = std::make_unique<FMSynth>(440.f, sampleRate);
+    fs->setModulatorFrequency(200.f);
+
 }
 
 void GouodLabAudioProcessor::releaseResources()
@@ -150,11 +159,18 @@ void GouodLabAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
     // the samples and the outer loop is handling the channels.
     // Alternatively, you can process the samples with the channels
     // interleaved by keeping the same state.
-    for (int channel = 0; channel < totalNumInputChannels; ++channel)
-    {
-        auto* channelData = buffer.getWritePointer (channel);
+    auto cL = buffer.getWritePointer(0);
+    auto cR = buffer.getWritePointer(1);
 
-        // ..do something to the data...
+    for(int sample = 0; sample < buffer.getNumSamples(); sample++) {
+        auto sL = std::get<0>(this->o->getSample()) + std::get<0>(this->o2->getSample())/2;
+        auto sR = std::get<1>(this->o->getSample()) + std::get<1>(this->o2->getSample())/2;
+        cL[sample] = sL;
+        cR[sample] = sR;
+        auto ssample = this->ss->getRandomSample();
+        this->o->setFrequency(ssample * 110);
+        this->o2->setFrequency(ssample * 110 * (1.f + 5.f/12.f));
+        //fs->setModulatorFrequency(200.f*bs->getSample() + 20);
     }
 }
 
