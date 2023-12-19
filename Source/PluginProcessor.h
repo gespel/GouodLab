@@ -62,11 +62,14 @@ public:
 private:
     //==============================================================================
     std::unique_ptr<FMSynth> fs;
-    std::unique_ptr<CommunicationServer> cs;
+    //std::unique_ptr<CommunicationServer> cs;
     std::unique_ptr<StrangeOrgan> o;
     std::unique_ptr<StrangeOrgan> o2;
     StepSequencer *ss;
-    ServerThread st;
+    //ServerThread st;
+    GKick *gk;
+    int counter = 0;
+    SineSynth *a;
 
     SineSynth *bs;
     
