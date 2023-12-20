@@ -165,11 +165,11 @@ void GouodLabAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
     auto cR = buffer.getWritePointer(1);
 
     for(int sample = 0; sample < buffer.getNumSamples(); sample++) {
-        auto sL = std::get<0>(this->o->getSample()) + std::get<0>(this->o2->getSample())/2;
-        auto sR = std::get<1>(this->o->getSample()) + std::get<1>(this->o2->getSample())/2;
+        //auto sL = std::get<0>(this->o->getSample()) + std::get<0>(this->o2->getSample())/2;
+        //auto sR = std::get<1>(this->o->getSample()) + std::get<1>(this->o2->getSample())/2;
         auto samp = gk->getSample();
-        //auto sL = samp;
-        //auto sR = samp;
+        auto sL = samp;
+        auto sR = samp;
         cL[sample] = sL;
         cR[sample] = sR;
         auto f = a->getSample()*1000;
@@ -180,7 +180,7 @@ void GouodLabAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
         //this->o2->setFrequency(ssample * 110 * (1.f + 5.f/12.f));
         //fs->setModulatorFrequency(200.f*bs->getSample() + 20);
         counter ++;
-        if(counter >= 10000) {
+        if(counter >= 40000) {
             gk->trigger();
             counter = 0;
         }
