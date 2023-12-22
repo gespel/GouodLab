@@ -95,6 +95,7 @@ void GouodLabAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlo
 {
     a = new SineSynth(5, sampleRate);
     gk = new GKick(sampleRate);
+    pd = new PadDrone(220.f, sampleRate);
     //this->cs = std::make_unique<CommunicationServer>();
     this->ss = new StepSequencer((float)sampleRate, {1.f, 1.f + 5.f/12.f, 1.f + 8.f/12.f, 2.f});
     this->ss->setSpeed(2);
@@ -167,9 +168,9 @@ void GouodLabAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
     for(int sample = 0; sample < buffer.getNumSamples(); sample++) {
         //auto sL = std::get<0>(this->o->getSample()) + std::get<0>(this->o2->getSample())/2;
         //auto sR = std::get<1>(this->o->getSample()) + std::get<1>(this->o2->getSample())/2;
-        auto samp = gk->getSample();
-        auto sL = samp;
-        auto sR = samp;
+        auto samp = pd->getSample();
+        auto sL = std::get<0>(samp);
+        auto sR = std::get<1>(samp);
         cL[sample] = sL;
         cR[sample] = sR;
         auto f = a->getSample()*1000;

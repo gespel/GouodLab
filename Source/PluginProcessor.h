@@ -72,6 +72,7 @@ private:
     SineSynth *a;
 
     SineSynth *bs;
+    PadDrone *pd;
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (GouodLabAudioProcessor)
 };
