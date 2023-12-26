@@ -68,6 +68,7 @@ private:
     StepSequencer *ss;
     //ServerThread st;
     GKick *gk;
+    GHat *gh;
     int counter = 0;
     SineSynth *a;
 
