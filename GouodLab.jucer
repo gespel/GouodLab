@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="JDx22Z" name="GouodLab" projectType="audioplug" useAppConfig="0"
-              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1">
+              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
+              pluginCharacteristicsValue="pluginWantsMidiIn" pluginManufacturer="GouodLabs"
+              pluginManufacturerCode="GLAB" bundleIdentifier="de.gouod.labs.gouodlab">
   <MAINGROUP id="QAyXuk" name="GouodLab">
     <GROUP id="{1628D1AC-E42D-5BE7-6B2E-A0153F8C03F9}" name="Source">
       <GROUP id="{2AEB511A-0828-982E-CD13-F2852A74B190}" name="GouodLib">
         <FILE id="fxyMcq" name="CommunicationServer.cpp" compile="1" resource="0"
               file="Source/GouodLib/CommunicationServer.cpp"/>
+        <FILE id="mXD1cW" name="MidiEventParser.cpp" compile="1" resource="0"
+              file="Source/GouodLib/MidiEventParser.cpp"/>
+        <FILE id="N1y3Ca" name="MidiEventParser.h" compile="0" resource="0"
+              file="Source/GouodLib/MidiEventParser.h"/>
         <FILE id="lH86rK" name="CommunicationServer.h" compile="0" resource="0"
               file="Source/GouodLib/CommunicationServer.h"/>
         <FILE id="qmDz2A" name="EnvelopeGenerator.cpp" compile="1" resource="0"

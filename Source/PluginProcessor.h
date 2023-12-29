@@ -14,7 +14,7 @@
 #include <memory>
 #include "GouodLib/CommunicationServer.h"
 #include "GouodLib/Instruments.h"
-
+#include "GouodLib/MidiEventParser.h"
 
 //==============================================================================
 /**
@@ -75,5 +75,7 @@ private:
     SineSynth *bs;
     PadDrone *pd;
     
+    MidiEventParser *mp;
+
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (GouodLabAudioProcessor)
 };

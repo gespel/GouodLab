@@ -107,6 +107,7 @@ void GouodLabAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlo
     //st.startThread();
     fs = std::make_unique<FMSynth>(440.f, sampleRate);
     fs->setModulatorFrequency(200.f);
+    this->mp = new MidiEventParser(sampleRate);
 
 }
 
@@ -165,6 +166,7 @@ void GouodLabAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
     // interleaved by keeping the same state.
     auto cL = buffer.getWritePointer(0);
     auto cR = buffer.getWritePointer(1);
+    this->mp->handle(&midiMessages);
 
     for(int sample = 0; sample < buffer.getNumSamples(); sample++) {
         //auto sL = std::get<0>(this->o->getSample()) + std::get<0>(this->o2->getSample())/2;
@@ -191,6 +193,7 @@ void GouodLabAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
             gk->trigger();
             counter = 0;
         }
+
     }
 }
 
