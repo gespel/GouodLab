@@ -74,6 +74,7 @@ private:
 
     SineSynth *bs;
     PadDrone *pd;
+    MegaDrone *md;
     
     MidiEventParser *mp;
 

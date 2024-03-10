@@ -93,13 +93,15 @@ void GouodLabAudioProcessor::changeProgramName (int index, const juce::String& n
 //==============================================================================
 void GouodLabAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
+    md = new MegaDrone(55, 500, sampleRate);
     a = new SineSynth(5, sampleRate);
     gk = new GKick(110, sampleRate);
     gh = new GHat(110, sampleRate);
     pd = new PadDrone(220.f, sampleRate);
     //this->cs = std::make_unique<CommunicationServer>();
-    this->ss = new StepSequencer((float)sampleRate, {1.f, 1.f + 5.f/12.f, 1.f + 8.f/12.f, 2.f});
-    this->ss->setSpeed(2);
+    //this->ss = new StepSequencer((float)sampleRate, {1.f, 1.f + 5.f/12.f, 1.f + 8.f/12.f, 2.f});
+    this->ss = new StepSequencer((float)sampleRate, {1, 3, 2, 0.5, 5});
+    this->ss->setSpeed(1);
     this->bs = new SineSynth(0.03, sampleRate);
     this->o = std::make_unique<StrangeOrgan>(440.f, sampleRate);
     this->o2 = std::make_unique<StrangeOrgan>(440.f * (1.f + 5.f/12.f), sampleRate);
@@ -171,7 +173,7 @@ void GouodLabAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
     for(int sample = 0; sample < buffer.getNumSamples(); sample++) {
         //auto sL = std::get<0>(this->o->getSample()) + std::get<0>(this->o2->getSample())/2;
         //auto sR = std::get<1>(this->o->getSample()) + std::get<1>(this->o2->getSample())/2;
-        auto samp = pd->getSample();
+        auto samp = md->getSample();
         
         //auto samp = gk->getSample();
         //auto sL = samp;
@@ -193,6 +195,7 @@ void GouodLabAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
             gk->trigger();
             counter = 0;
         }
+        md->setFrequency(ss->getSample() * 110.f);
 
     }
 }
