@@ -7,6 +7,10 @@
   <MAINGROUP id="QAyXuk" name="GouodLab">
     <GROUP id="{1628D1AC-E42D-5BE7-6B2E-A0153F8C03F9}" name="Source">
       <GROUP id="{2AEB511A-0828-982E-CD13-F2852A74B190}" name="GouodLib">
+        <GROUP id="{8E976904-1AA2-28B7-B3AC-78C79624AEFC}" name="Instruments">
+          <FILE id="IU87zN" name="LichtenKick.cpp" compile="1" resource="0" file="Source/GouodLib/Instruments/LichtenKick.cpp"/>
+          <FILE id="KyBwfs" name="LichtenKick.h" compile="0" resource="0" file="Source/GouodLib/Instruments/LichtenKick.h"/>
+        </GROUP>
         <FILE id="fxyMcq" name="CommunicationServer.cpp" compile="1" resource="0"
               file="Source/GouodLib/CommunicationServer.cpp"/>
         <FILE id="mXD1cW" name="MidiEventParser.cpp" compile="1" resource="0"
