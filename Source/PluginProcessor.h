@@ -15,6 +15,7 @@
 #include "GouodLib/CommunicationServer.h"
 #include "GouodLib/Instruments.h"
 #include "GouodLib/MidiEventParser.h"
+#include "GouodLib/Instruments/LichtenKick.h"
 
 //==============================================================================
 /**

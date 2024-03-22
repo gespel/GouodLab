@@ -168,7 +168,7 @@ void GouodLabAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
     // interleaved by keeping the same state.
     auto cL = buffer.getWritePointer(0);
     auto cR = buffer.getWritePointer(1);
-    this->mp->handle(&midiMessages);
+    //this->mp->handle(&midiMessages);
 
     for(int sample = 0; sample < buffer.getNumSamples(); sample++) {
         //auto sL = std::get<0>(this->o->getSample()) + std::get<0>(this->o2->getSample())/2;
